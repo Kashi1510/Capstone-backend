@@ -28,5 +28,11 @@ public class CompanyServiceImpl implements CompanyService{
 		return findCompanyOpt.get();
 		}
 
+	@Override
+	public CompanyRegistration findByEmail(String email) {
+		Optional<CompanyRegistration> companyOpt = companyRepository.findByEmail(email);
+        return companyOpt.orElse(null); // Return company details if found, otherwise return null
+	}
+
 	
 }

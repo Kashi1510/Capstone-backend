@@ -1,11 +1,13 @@
 package com.example.Internship_portal.companyregistration;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
 public class CompanyRegistration {
   @Id
+  @GeneratedValue
   private Integer id;
   private String companyname;
   private String city;
@@ -15,20 +17,19 @@ public class CompanyRegistration {
 public CompanyRegistration() {
 	super();
 }
-public CompanyRegistration(Integer id,String companyname, String city, String email, String password, String address) {
+public CompanyRegistration(Integer id, String companyname, String city, String email, String password, String address) {
 	super();
-	this.id=id;
+	this.id = id;
 	this.companyname = companyname;
 	this.city = city;
 	this.email = email;
 	this.password = password;
 	this.address = address;
 }
-
-public int getId() {
+public Integer getId() {
 	return id;
 }
-public void setId(int id) {
+public void setId(Integer id) {
 	this.id = id;
 }
 public String getCompanyname() {
@@ -61,5 +62,6 @@ public String getAddress() {
 public void setAddress(String address) {
 	this.address = address;
 }
+  
   
 }
