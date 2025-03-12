@@ -11,9 +11,10 @@ import jakarta.persistence.Table;
 public class StuRegistration {
 	
 	@Id
-//	@GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue
+    
+    
 	private Integer id;
-	
 	private String firstName;
 	 private String lastName;
 	 private String email;
@@ -26,7 +27,7 @@ public class StuRegistration {
 		super();
 	}
 	public StuRegistration(Integer id, String firstName, String lastName, String email, String password,
-			 String sslcPercentage, String pucPercentage, String degreeCgpa, String skills) {
+			String sslcPercentage, String pucPercentage, String degreeCgpa, String skills) {
 		super();
 		this.id = id;
 		this.firstName = firstName;
@@ -68,7 +69,6 @@ public class StuRegistration {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
 	public String getSslcPercentage() {
 		return sslcPercentage;
 	}
@@ -94,4 +94,6 @@ public class StuRegistration {
 		this.skills = skills;
 	}
 	
+	
+		
 }
