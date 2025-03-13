@@ -17,10 +17,7 @@ public class InternshipController {
 	
 	@Autowired
 	 private InternshipService internshipService;
-//
-//	    public InternshipController(InternshipService internshipService) {
-//	        this.internshipService = internshipService;
-//	    }
+
 
 	    @GetMapping
 	    public List<Internship> getInternships() {
